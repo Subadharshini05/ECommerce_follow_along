@@ -34,3 +34,6 @@ Authentication ensures only the right people can access certain features. For ex
 
   ## Milestone 4:
   Created a User Model to define how user data is structured in the database also developed a user interactions, like adding or retrieving data. Additionally, configured Multer to handle file uploads, allowing users to store files such as images.
+
+  ## Milestone 5:
+   In this I create a react app and design the signup page and style it Tailwindcss. It gives a wonderful Experience and i get some knowledge that how to work on a professional project. 
