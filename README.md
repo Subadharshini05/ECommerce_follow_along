@@ -36,12 +36,14 @@ Authentication ensures only the right people can access certain features. For ex
   Created a User Model to define how user data is structured in the database also developed a user interactions, like adding or retrieving data. Additionally, configured Multer to handle file uploads, allowing users to store files such as images.
 
   ## Milestone 5:
-   In this I create a react app and design the signup page and style it Tailwindcss. It gives a wonderful Experience and i get some knowledge that how to work on a professional project. 
+  In this I create a react app and design the signup page and style it Tailwindcss. It gives a wonderful Experience and i get some knowledge that how to work on a professional project. 
 
   ## Milestone 6:
-   In this milestone, we created a backend endpoint to securely store user data during signup. Key features include:
+  In this milestone, we created a backend endpoint to securely store user data during signup. Key features include:
 
    Password Encryption: Encrypting passwords before storing them in the database to enhance security.
    Secure Data Storage: Saving user details while following best security practices.
    Compliance: Ensuring password protection aligns with security laws like GDPR and PCI-DSS.
 
+  ## Milestone 7:
+  In this milestone, we implemented user login authentication by validating credentials and comparing encrypted passwords using bcrypt. The process involves retrieving user data, hashing the entered password, and matching it with the stored hash. If authenticated, access is granted; otherwise, an error is returned. This enhances security and protects user data. 
