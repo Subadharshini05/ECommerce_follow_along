@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { AiOutlinePlusCircle } from "react-icons/ai";
-
+import axios from "axios";
 const CreateProduct = () => {
     const [images, setImages] = useState([]);
     const [previewImages, setPreviewImages] = useState([]);
@@ -34,32 +34,52 @@ const CreateProduct = () => {
         };
     }, [previewImages]);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async(e) => {
         e.preventDefault();
-        const productData = {
-            name,
-            description,
-            category,
-            tags,
-            price,
-            stock,
-            email,
-            images,
-        };
-        console.log("Product Data:", productData);
+        const formData = new FormData();
+        formData.append("name", name);
+        formData.append("description", description);
+        formData.append("category", category);
+        formData.append("tags", tags);
+        formData.append("price", price);
+        formData.append("stock", stock);
+        formData.append("email", email);
+        
+        images.forEach((image) => {
+            formData.append("images", image);
+            
+        });
+        try {
+            const response = await axios.post("http://localhost:8000/api/v2/product/create-product",
+                formData,
+                {
+                    headers: {
+                        "Content-Type": "multipart/form-data",
+                        
+                    },
+                }
+            );
+        if (response.status === 201) {
         alert("Product created successfully!");
-
-        // Reset Form
         setImages([]);
         setPreviewImages([]);
         setName("");
         setDescription("");
         setCategory("");
         setTags("");
-        setPrice(0);
-        setStock(0);
+        setPrice("");
+        setStock("");
         setEmail("");
     };
+ 
+}
+        catch (err) {
+            console.error("Error creating product:", err);
+            alert("Failed to create product. Please check the data and try again");
+        }
+    }        
+             
+      
 
     return (
         <div className="w-[90%] max-w-[500px] bg-white shadow-lg rounded-lg p-6 mx-auto border border-gray-200">
@@ -188,6 +208,6 @@ const CreateProduct = () => {
             </form>
         </div>
     );
-};
+}
 
 export default CreateProduct;
