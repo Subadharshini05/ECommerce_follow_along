@@ -36,46 +36,67 @@ Authentication ensures only the right people can access certain features. For ex
   Created a User Model to define how user data is structured in the database also developed a user interactions, like adding or retrieving data. Additionally, configured Multer to handle file uploads, allowing users to store files such as images.
 
   ## Milestone 5:
-  In this I create a react app and design the signup page and style it Tailwindcss. It gives a wonderful Experience and i get some knowledge that how to work on a professional project. 
+   In this I create a react app and design the signup page and style it Tailwindcss. It gives a wonderful Experience and i get some knowledge that how to work on a professional project. 
 
-  ## Milestone 6:
-  In this milestone, we created a backend endpoint to securely store user data during signup. Key features include:
+## Milestone 6:
+In this milestone, we created a backend endpoint to securely store user data during signup. Key features include:
 
-   Password Encryption: Encrypting passwords before storing them in the database to enhance security.
-   Secure Data Storage: Saving user details while following best security practices.
-   Compliance: Ensuring password protection aligns with security laws like GDPR and PCI-DSS.
+- Password Encryption: Encrypting passwords before storing them in the database to enhance security.
+- Secure Data Storage: Saving user details while following best security practices.
+- Compliance: Ensuring password protection aligns with security laws like  GDPR and PCI-DSS.
 
-  ## Milestone 7:
-  In this milestone, we implemented user login authentication by validating credentials and comparing encrypted passwords using bcrypt. The process involves retrieving user data, hashing the entered password, and matching it with the stored hash. If authenticated, access is granted; otherwise, an error is returned. This enhances security and protects user data. 
+## Milestone 7 :
+In this milestone, we implemented user login authentication by validating credentials and comparing encrypted passwords using bcrypt. The process involves retrieving user data, hashing the entered password, and matching it with the stored hash. If authenticated, access is granted; otherwise, an error is returned. This enhances security and protects user data. 🚀
 
-  ## Milestone 8:
-- Build a *frontend card component* for products.  
-- Display these *product cards* on the homepage.  
+## Milestone 8:
+### Learning Goals 🎯  
+- Build a **frontend card component** for products.  
+- Display these **product cards** on the homepage.  
 
 This milestone focuses on designing a reusable product card and integrating it into the homepage to showcase multiple products effectively. 🚀
 
-# Milestone 9 :
-
-Creating a Product Form
+# Milestone 9 - Creating a Product Form
 
 ## Why Create a Product Form?
 The Product Form is essential for adding new products to the database. It allows users to input product details, which will be stored in MongoDB Atlas and displayed on the Products Home Page.
 
 ## Key Features of the Product Form:
-- *Product Details Input:* The form collects essential details like:
+- **Product Details Input:** The form collects essential details like:
   - Product Name  
   - Price  
   - Category  
   - Description  
   - Stock Availability  
-- *Data Storage:* The entered data will be saved in MongoDB Atlas.  
-- *Future Enhancements (for experimentation):*  
-  - *Admin Access:* Only admins can upload products.  
-  - *Shop Profiles:* A user with a "Shop Profile" can add and manage products.  
+- **Data Storage:** The entered data will be saved in MongoDB Atlas.  
+- **Future Enhancements (for experimentation):**  
+  - **Admin Access:** Only admins can upload products.  
+  - **Shop Profiles:** A user with a "Shop Profile" can add and manage products.  
 
 ## Steps to Implement:
-1. *Create a Product Form* in *React/HTML* to collect product details.  
-2. *Handle Form Submission* to store the product data in MongoDB.  
-3. *Restrict Access* (Optional Enhancements) based on user roles (Admin/Shop).  
+1. **Create a Product Form** in **React/HTML** to collect product details.  
+2. **Handle Form Submission** to store the product data in MongoDB.  
+3. **Restrict Access** (Optional Enhancements) based on user roles (Admin/Shop).  
 
 This milestone helps in understanding how to structure and manage product data efficiently.
+
+# Milestone 10 Summary
+
+In this milestone, you'll learn how to create a **mongoose schema** for products and build an **endpoint** to store product details in MongoDB. The main steps include:
+
+## 1. Product Schema
+- Define the structure for product data (e.g., name, description, price) with validation for required fields and correct data types.
+
+## 2. Endpoint Creation
+- Build a POST endpoint to receive product data, validate it, and save it to MongoDB.
+
+## 3. Validation
+- Ensure only valid data is saved, which helps maintain data integrity and prevent errors.
+
+# Milestone 11
+
+In Milestone 11, I focused on implementing functionality to send and receive product data between the backend and frontend of my e-commerce project. On the backend, I created an API endpoint that retrieves all products from MongoDB, sending the data to the frontend in JSON format. On the frontend, I created a function to fetch the product data and display it dynamically using a previously created product card component. This milestone helped me understand how to handle data transfer between the backend and frontend and how to display dynamic content using React components.
+
+
+# Milestone 12
+
+In Milestone 12, I focused on filtering product data based on the user’s email and displaying it dynamically on the frontend. On the backend, I created an API endpoint that retrieves products from MongoDB based on a specific user email. On the frontend, I developed a function to fetch the filtered data and displayed it using the previously created product card component. This milestone helped me understand how to filter data with specific constraints and pass it to the client for dynamic rendering, improving how user-specific product information is handled and shown.
