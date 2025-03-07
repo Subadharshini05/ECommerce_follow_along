@@ -116,8 +116,14 @@ Deleting Data from MongoDB
 
 # Milestone 15
 
-In Milestone 15, you will learn how to create a reusable Nav component and integrate it across multiple pages, including Home, My Products, Add Product, and Cart. The focus will be on ensuring smooth navigation and making the navbar fully responsive for all screen sizes. By completing this milestone, you will gain a deeper understanding of component reusability and navigation in web applications, improving both user experience and maintainability. 
+In Milestone 15, you will learn how to create a reusable Nav component and integrate it across multiple pages, including Home, My Products, Add Product, and Cart. The focus will be on ensuring smooth navigation and making the navbar fully responsive for all screen sizes. By completing this milestone, you will gain a deeper understanding of component reusability and navigation in web applications, improving both user experience and maintainability. 🚀
 
 # Milestone 16
 
 In this milestone, you will create a new page to display detailed information for each product, including an option to adjust quantity and an "Add to Cart" button. This will enhance the user experience by allowing better product interaction. Once completed, push your code to a public GitHub repository, update the README with your progress, and submit the repository link as required. 
+
+# Milestone 17:
+In this milestone, we designed the cart schema to store product details in a user's cart, including product ID, name, quantity, price, and total. The schema also tracks the total amount for the cart and associates the cart with a specific user.
+
+# Milestone 18: 
+In this milestone, we created a **GET `/cart`** endpoint to fetch the user's cart details, including product information and total amount. The endpoint ensures that only authenticated users can access their cart and retrieves the cart data from the database.
