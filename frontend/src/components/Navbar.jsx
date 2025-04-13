@@ -119,7 +119,6 @@ const NavBar = () => {
                                     Profile
                                 </NavLink>
                             </li>
-
                             <li>
                                 <NavLink
                                     to="/myorders"
@@ -129,9 +128,10 @@ const NavBar = () => {
                                             : "text-gray-200 hover:text-white px-3 py-2 rounded-md text-sm transition-colors duration-200"
                                     }
                                 >
-                                    Login
+                                    My Orders
                                 </NavLink>
                             </li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -197,6 +197,19 @@ const NavBar = () => {
                         </li>
                         <li>
                             <NavLink
+                                to="/profile"
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? "block text-white font-semibold px-3 py-2 rounded-md text-base transition-colors duration-200"
+                                        : "block text-gray-200 hover:text-white px-3 py-2 rounded-md text-base transition-colors duration-200"
+                                }
+                                onClick={() => setIsOpen(false)}
+                            >
+                                Profile
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
                                 to="/myorders"
                                 className={({ isActive }) =>
                                     isActive
@@ -205,7 +218,7 @@ const NavBar = () => {
                                 }
                                 onClick={() => setIsOpen(false)}
                             >
-                                My 
+                                My Orders
                             </NavLink>
                         </li>
                     </ul>

@@ -86,6 +86,7 @@ router.post('/place-order', async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 });
+
 router.get('/my-orders', async (req, res) => {
     try {
         const { email } = req.query;
@@ -104,8 +105,10 @@ router.get('/my-orders', async (req, res) => {
         res.status(200).json({ orders });
     } catch (error) {
         console.error('Error fetching orders:', error);
-        res.status(500).json({ message: error.message });
-    }
+        res.status(500).json({ message: error.message });
+    }
+
+
 });
 
 router.patch('/cancel-order/:orderId', async (req, res) => {
