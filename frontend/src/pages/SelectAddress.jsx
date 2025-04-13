@@ -16,7 +16,7 @@ const SelectAddress = () => {
         if (!userEmail) return;
         const fetchAddresses = async () => {
             try {
-                const response = await fetch(`http://localhost:8000/api/v2/user/addresses?email=${encodeURIComponent(userEmail)}`);
+                const response = await fetch(`http://localhost:8000/api/v2/user/addreses?email=${encodeURComponent(userEmail)}`);
 
                 if (!response.ok) {
                     if (response.status === 404) {
