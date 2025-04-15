@@ -5,7 +5,7 @@ module.exports = (err, req, res, next) => {
     err.message = err.message || "Internal server Error";
 
    
-    if (err.name === "Casterror") {
+    if (err.name === "CastError") {
         const message = `Resources not found with this id.. Invalid ${err.path}`;
         err = new ErrorHandler(message, 400);
     }
